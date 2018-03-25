@@ -53,8 +53,8 @@ func main() {
 	//	c.Redirect(http.StatusMovedPermanently, "/articles")
 	//})
 
-	router.GET("/doctors", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "basic/doctors", gin.H{})
+	router.GET("/survey", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "basic/survey", gin.H{})
 	})
 
 	// Articles
