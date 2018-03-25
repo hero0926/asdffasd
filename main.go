@@ -51,28 +51,37 @@ func main() {
 
 	router.GET("/", func(c *gin.Context) {
 
-<<<<<<< HEAD
 		c.Redirect(http.StatusMovedPermanently, "/main")
+	})
+
+	router.GET("/articles", func(c *gin.Context) {
+
+		c.Redirect(http.StatusMovedPermanently, "/consults")
+	})
+
+	router.POST("/articles", func(c *gin.Context) {
+
+		c.Redirect(http.StatusMovedPermanently, "/consults")
 	})
 
 	router.GET("/doctors", func(c *gin.Context) { // 의사소개
 		c.HTML(http.StatusOK, "basic/doctors", gin.H{})
-=======
-	router.GET("/survey", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "basic/survey", gin.H{})
->>>>>>> 131ced1d3bffd50363b92fcd99c5ad2d153bf7ed
 	})
 
 	router.GET("/main", func(c *gin.Context) { //메인페이지
 		c.HTML(http.StatusOK, "basic/content", gin.H{})
 	})
 
-	router.GET("/contact", func(c *gin.Context) { //메인페이지
+	router.GET("/consult", func(c *gin.Context) { // 1. 로그인페이지 > // 2. 설문조사 페이지 // > 3. 의사 추천 페이지
+		c.HTML(http.StatusOK, "basic/survey", gin.H{})
+	})
+
+	router.GET("/contact", func(c *gin.Context) { //질문페이지
 		c.HTML(http.StatusOK, "basic/contact", gin.H{})
 	})
 
 	// Articles
-	router.GET("/new", articles.New)                     // 새로운 메일 보내기
+	router.GET("/new", articles.New)                     // 4. 상담 전송 폼
 	router.GET("/consult/:_id", articles.Edit)           // 메일 읽기
 	router.GET("/consults", articles.List)               // 내가 쓴 상담 리스트
 	router.POST("/consult", articles.Create)             // 상담 쓰기
