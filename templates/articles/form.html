@@ -2,7 +2,7 @@
 
   <div class="page-header">
     <h2>
-      {{ .title }} {{ .article.Title }}
+      Consults
       {{ if .article.Id }}
         <form class="inline pull-right" action="/delete/consult/{{ .article.Id.Hex }}" method="POST">
           <a href="javascript:void(0);" onclick="if (confirm('Are you sure you want to delete {{ .article.Title }}?')) document.forms[0].submit();" class="red">

@@ -11,6 +11,6 @@ func Index(c *gin.Context) {
 
 	c.HTML(http.StatusOK, "basic/main", gin.H{
 		"title":    "Main",
-		"articles": "articles",
+		"articles": "Consults",
 	})
 }

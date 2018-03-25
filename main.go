@@ -73,11 +73,19 @@ func main() {
 	})
 
 	router.GET("/consult", func(c *gin.Context) { // 1. 로그인페이지 > // 2. 설문조사 페이지 // > 3. 의사 추천 페이지
-		c.HTML(http.StatusOK, "basic/survey", gin.H{})
+		c.HTML(http.StatusOK, "basic/login", gin.H{})
 	})
 
 	router.GET("/contact", func(c *gin.Context) { //질문페이지
 		c.HTML(http.StatusOK, "basic/contact", gin.H{})
+	})
+
+	router.GET("/consultlogined", func(c *gin.Context) { //질문페이지
+		c.HTML(http.StatusOK, "basic/survey", gin.H{})
+	})
+
+	router.GET("/doctorSelect", func(c *gin.Context) { //질문페이지
+		c.HTML(http.StatusOK, "basic/doctorSelect", gin.H{})
 	})
 
 	// Articles

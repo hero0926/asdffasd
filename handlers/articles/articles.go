@@ -50,7 +50,7 @@ func Edit(c *gin.Context) {
 	}
 
 	c.HTML(http.StatusOK, "articles/form", gin.H{
-		"title":   "Edit article",
+		"title":   "Edit consult",
 		"article": article,
 	})
 }
@@ -64,7 +64,7 @@ func List(c *gin.Context) {
 		c.Error(err)
 	}
 	c.HTML(http.StatusOK, "articles/list", gin.H{
-		"title":    "Articles",
+		"title":    "Consults",
 		"articles": articles,
 	})
 }
