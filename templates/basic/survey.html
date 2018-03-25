@@ -1,123 +1,194 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+{{ define "content" }}
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>팀이름</title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
-<link href="default.css" rel="stylesheet" type="text/css" media="all" />
-<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="/public/css/default.css">
-<link rel="stylesheet" href="/public/css/fonts.css">
-<!--[if IE 6]>
-<link href="default_ie6.css" rel="stylesheet" type="text/css" />
-<![endif]-->
-</head>
-<body>
-
-<div id="header-wrapper2">
-	<div id="header" class="container">
-		
-		<div id="logo">
-			<h1><a href="#" class="icon icon-group"><span>팀이름</span></a></h1>
-		</div>
-		<div id="menu">
+<h1>SURVEY</h1>
+<section>
+	<form action="/articles/{{ .article.Id.Hex }}" method="POST">
+		<div class="hex_row_odd"> 
+			<div class="center">
+				<div class="hexagon">
+					<div class="hex1">
+						<div class="hex2" style="background: center no-repeat">
+							<div class="desc">
+							</br>
+								<h3>1. Have you ever been in counseling or therapy before?</h2></br>
+								<input class="yes1" type="radio" name="survey1" value="yes" id="radioButton1" /><label for="survey1">yes</label>
+								<input class="no1" type="radio" name="survey1" value="no" id="radioButton2" /><label for="survey1">no</label>
+							</div>
+							</br>  
+						</div><!--/hex2--> 
+					</div><!--/hex1-->
+				</div><!--/hexagon--> 
+			</div><!--/center-->
 			
-			<ul>
-				<li class="current_page_item"><a href="#" accesskey="1" title="">팀 이름</a></li>
-				<li><a href="/doctors" accesskey="2" title="">DOCTORS</a></li>
-				<li><a href="/faq" accesskey="3" title="">FAQ</a></li>
-				<li><a href="/contact" accesskey="4" title="">Contact Us</a></li>
-			</ul>
-		</div>
-	</div>
-</div>
+			<div class="center">
+				<div class="hexagon">
+					<div class="hex1">
+						<div class="hex2" style="background: center no-repeat">
+							<div class="desc">
+								<h3>2. How would you rate your current physical health?</h3></br>
+								<input class="good1" type="radio" name="survey2" value="Good" id="radioButton3" /><label for="survey2">Good</label>
+								<input class="fair1" type="radio" name="survey2" value="Fair" id="radioButton4" /><label for="survey2">Fair</label>
+								<input class="poor1" type="radio" name="survey2" value="Poor" id="radioButton5" /><label for="survey2">Poor</label>
+							</div> 
+							</br> 
+						</div><!--/hex2--> 
+					</div><!--/hex1-->
+				</div><!--/hexagon--> 
+			</div><!--/center--> 
+			
+			<div class="center">
+				<div class="hexagon">
+					<div class="hex1">
+						<div class="hex2" style="background: center no-repeat">
+								<div class="desc">
+									<h3>3. How would you rate your current sleeping habits?</h3></br>
+									<input class="good1" type="radio" name="survey3" value="Good" id="radioButton6" /><label for="survey3">Good</label>
+									<input class="fair1" type="radio" name="survey3" value="Fair" id="radioButton7" /><label for="survey3">Fair</label>
+									<input class="poor1" type="radio" name="survey3" value="Poor" id="radioButton8" /><label for="survey3">Poor</label>
+								</div> 
+								</br> 
+						</div><!--/hex2--> 
+					</div><!--/hex1-->
+				</div><!--/hexagon--> 
+			</div><!--/center--> 
+		</div><!--/hex_row_even-->
 
-<div id="wrapper">
-	<div id="page" class="container">
-		<div id="content">
-			<div id="banner"> <img src="public/images/pic02.jpg" width="790" height="300" alt="" /> </div>
-			<div class="title">
-				<h2>sadfsaf</h2>
-				<span class="byline">sadfsafdafsd</span> </div>
-			<p>This is <strong>sfafs</strong>, asfd TEMPLATED</a>. asfd </p>
-			<div id="two-column">
-				<div id="tbox1">
-					<div class="title">
-						<h2>sdfaasdfsfd</h2>
-					</div>
-					<ul class="style2">
-						<li><a href="#">asdf mod safd eget mi dolore</a></li>
-						<li><a href="#">asfd safd feugiat sit dolor</a></li>
-						<li><a href="#">safd ornare in hendrerit in lectus</a></li>
-						<li><a href="#">Amet turpis, feugiat et sit amet</a></li>
-						<li><a href="#">Amet ornare in hendrerit in lectus</a></li>
-						<li><a href="#">Consequat etiam lorem phasellus</a></li>
-					</ul>
-					<a href="#" class="icon icon-file-alt button">Read More</a> </div>
-				<div id="tbox2">
-					<div class="title">
-						<h2>Maecenas luctus</h2>
-					</div>
-					<p><img src="public/images/pic03.jpg" width="370" height="170" alt="" /></p>
-					<p>Etiam non felis. Donec ut ante. In id eros. Sed dictum rutrum massa eu volutpat. Suspendisse lacus turpis, cursus egestas at sem. Mauris quam enim, molestie.</p>
-					<a href="#" class="icon icon-ok button">Read More</a>
-				</div>
-			</div>
-		</div>
-		<div id="sidebar">
-			<div class="box1">
-				<div class="title">
-					<h2>Maecenas luctus</h2>
-				</div>
-				<p>Etiam non felis. Donec ut ante. In id eros. Sed dictum rutrum massa eu volutpat. Suspendisse lacus turpis, cursus egestas at sem. Mauris quam enim, molestie dictum rutrum massa.</p>
-				<a href="#" class="icon icon-ok button">Read More</a>
-			</div>
-			<div class="box2">
-				<div class="title">
-					<h2>Mauris vulputate</h2>
-				</div>
-				<ul class="style2">
-					<li><a href="#">Semper mod quis eget mi dolore</a></li>
-					<li><a href="#">Quam turpis feugiat sit dolor</a></li>
-					<li><a href="#">Amet ornare in hendrerit in lectus</a></li>
-					<li><a href="#">Consequat etiam lorem phasellus</a></li>
-					<li><a href="#">Amet turpis, feugiat et sit amet</a></li>
-					<li><a href="#">Semper mod quisturpis nisi</a></li>
-				</ul>
-			</div>
-			<div class="box3">
-				<div class="title">
-					<h2>Integer gravida</h2>
-				</div>
-				<ul class="style2">
-					<li><a href="#">Amet turpis, feugiat et sit amet</a></li>
-					<li><a href="#">Ornare in hendrerit in lectus</a></li>
-					<li><a href="#">Semper mod quis eget mi dolore</a></li>
-					<li><a href="#">Quam turpis feugiat sit dolor</a></li>
-					<li><a href="#">Amet ornare in hendrerit in lectus</a></li>
-					<li><a href="#">Semper mod quisturpis nisi</a></li>
-					<li><a href="#">Consequat etiam lorem phasellus</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</div>
-<div id="portfolio-wrapper">
-	<div id="portfolio" class="container">
-		<div class="title">
-			<h2>Praesent scelerisque scelerisque</h2>
-		</div>
-		<p class="description">In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra vulputate enim. Praesent pellentesque facilisis elit. Class aptent taciti sociosqu torquent per conubia nostra inceptos hymenaeos.</p>
-	</div>
-</div>
-<div id="copyright" class="container">
-	<p>&copy; ㅁㄴㄹㅇㅁㄹㄴ. | ㅁㄴㅇㄹㄹㄴㅁh</a> | ㅁㄴㅇㄹㄴㅁㅇㄹㅁㄹㄴㅇ</a>.</p>
-</div>
-</body>
-</html>
+		<div class="hex_row_even"> 
+			<div class="center">
+				<div class="hexagon">
+					<div class="hex1">
+						<div class="hex2" style="background: center no-repeat">
+							<div class="desc">
+								<h3>4. How would you rate your current eating habits?</h3></br>
+								<input class="good1" type="radio" name="survey4" value="Good" id="radioButton9" /><label for="survey4">Good</label>
+								<input class="fair1" type="radio" name="survey4" value="Fair" id="radioButton10" /><label for="survey4">Fair</label>
+								<input class="poor1" type="radio" name="survey4" value="Poor" id="radioButton11" /><label for="survey4">Poor</label>
+							</div> 
+							</br>  
+						</div><!--/hex2--> 
+					</div><!--/hex1-->
+				</div><!--/hexagon--> 
+			</div><!--/center-->
+			
+			<div class="center">
+				<div class="hexagon">
+					<div class="hex1">
+						<div class="hex2" style="background: center no-repeat">
+							<div class="desc">
+								<h3>5. How would you rate your current financial status?</h3></br>
+								<input class="good1" type="radio" name="survey5" value="Good" id="radioButton12" /><label for="survey5">Good</label>
+								<input class="fair1" type="radio" name="survey5" value="Fair" id="radioButton13" /><label for="survey5">Fair</label>
+								<input class="poor1" type="radio" name="survey5" value="Poor" id="radioButton14" /><label for="survey5">Poor</label>
+							</div> 
+							</br>  
+						</div><!--/hex2--> 
+					</div><!--/hex1-->
+				</div><!--/hexagon--> 
+			</div><!--/center--> 
+			
+			<div class="center">
+				<div class="hexagon">
+					<div class="hex1">
+						<div class="hex2" style="background: center no-repeat">
+							<div class="desc">
+								<h3>6. When was the last time you had a plan to commit suicide?</h3></br>
+								<input class="survey61" type="radio" name="survey6" value="Never" id="radioButton15" /><label for="survey6">Never</label>
+								<input class="survey62" type="radio" name="survey6" value="over a year ago" id="radioButton16" /><label for="survey6">over a year ago</label>
+								<input class="survey63" type="radio" name="survey6" value="over 3 months ago" id="radioButton17" /><label for="survey6">over 3 months ago</label>
+								<input class="survey64" type="radio" name="survey6" value="over a month ago" id="radioButton18" /><label for="survey6">over a month ago</label>
+								<input class="survey65" type="radio" name="survey6" value="over a week ago" id="radioButton19" /><label for="survey6">over a week ago</label>
+								<input class="survey66" type="radio" name="survey6" value="this week" id="radioButton20" /><label for="survey6">this week</label>
+							</div> 
+							</br>   
+						</div><!--/hex2--> 
+					</div><!--/hex1-->
+				</div><!--/hexagon--> 
+			</div><!--/center--> 
+			
+		<div class="center">
+				<div class="hexagon">
+					<div class="hex1">
+						<div class="hex2" style="background: center no-repeat">
+							<div class="desc">
+								<h3>7. What kind of languages do you prefer to talk?</h3></br>
+								<input class="english" type="radio" name="survey7" value="English" id="radioButton21" /><label for="survey7">English</label>
+								<input class="korean" type="radio" name="survey7" value="Korean" id="radioButton22" /><label for="survey7">Korean</label>
+								<input class="others" type="radio" name="survey7" value="Others" id="radioButton23" /><label for="survey7">Others</label>
+								<input class="other-etc" type="text" value="" />
+							</div> 
+							</br> 
+						</div><!--/hex2--> 
+					</div><!--/hex1-->
+				</div><!--/hexagon--> 
+			</div><!--/center--> 
+			
+		</div><!--/hex_row_even--> 
+			
+		<div class="hex_row_odd"> 
+			<div class="center">
+				<div class="hexagon">
+					<div class="hex1">
+						<div class="hex2" style="background: center no-repeat">
+							<div class="desc">
+								<h3>8. How does the problem typically make you feel?</h3></br>
+								<input class="depressed" type="checkbox" name="survey8" value="depressed" id="checkbox1" /><label for="survey8">depressed</label>
+								<input class="stressed" type="checkbox" name="survey8" value="stressed" id="checkbox2" /><label for="survey8">stressed</label>
+								<input class="anxious" type="checkbox" name="survey8" value="anxious" id="checkbox3" /><label for="survey8">anxious</label>
+								<input class="angry" type="checkbox" name="survey8" value="angry" id="checkbox4" /><label for="survey8">angry</label>
+								<input class="feel-nothing" type="checkbox" name="survey8" value="feel nothing" id="checkbox5" /><label for="survey8">feel nothing</label>
+							</div> 
+							</br>  
+						</div><!--/hex2--> 
+					</div><!--/hex1-->
+				</div><!--/hexagon--> 
+			</div><!--/center-->
+			
+			<div class="center">
+				<div class="hexagon">
+					<div class="hex1">
+						<div class="hex2" style="background: center no-repeat">
+							<div class="hex2" style="background: center no-repeat">
+								<div class="desc">
+									<h3>9. what kind of problem do you have?</h3></br>
+									<input class="family" type="checkbox" name="survey9" value="family" id="checkbox6" /><label for="survey9">family</label>
+									<input class="friends" type="checkbox" name="survey9" value="friends" id="checkbox7" /><label for="survey9">friends</label>
+									<input class="relationship" type="checkbox" name="survey9" value="relationship" id="checkbox8" /><label for="survey9">relationship</label>
+									<input class="additction" type="checkbox" name="survey9" value="additction" id="checkbox9" /><label for="survey9">additction</label>
+									<input class="academic-concerns" type="checkbox" name="survey9" value="academic concerns" id="checkbox10" /><label for="survey9">academic concerns</label>
+									<input class="financial-concerns" type="checkbox" name="survey9" value="financial concerns" id="checkbox11" /><label for="survey9">financial concerns</label>
+									<input class="self-esteem" type="checkbox" name="survey9" value="self-esteem" id="checkbox12" /><label for="survey9">self-esteem</label>
+									<input class="confidence" type="checkbox" name="survey9" value="confidence" id="checkbox13" /><label for="survey9">confidence</label>
+								</div> 
+								</br>  
+						</div><!--/hex2--> 
+					</div><!--/hex1-->
+				</div><!--/hexagon--> 
+			</div><!--/center--> 
+			
+			<div class="center">
+				<div class="hexagon">
+					<div class="hex1">
+						<div class="hex2" style="background: center no-repeat">
+							<div class="desc">
+								<h3>10. What is your orientation?</h3></br>
+								<input class="survey11" type="radio" name="survey10" value="staright" id="radioButton24" /><label for="survey10">staright</label>
+								<input class="survey12" type="radio" name="survey10" value="gay" id="radioButton25" /><label for="survey10">gay</label>
+								<input class="survey13" type="radio" name="survey10" value="lesbian" id="radioButton26" /><label for="survey10">lesbian</label>
+								<input class="survey14" type="radio" name="survey10" value="bisexual" id="radioButton27" /><label for="survey10">bisexual</label>
+								<input class="survey15" type="radio" name="survey10" value="not sure" id="radioButton128" /><label for="survey10">not sure</label>
+							</div> 
+							</br> 
+						</div><!--/hex2--> 
+					</div><!--/hex1-->
+				</div><!--/hexagon--> 
+			</div><!--/center--> 
+		</div><!--/hex_row_even-->  
+
+		<button type="submit" class="btn btn-default">Submit</button>
+
+	</form>
+	
+</section>  
+
+
+{{ end }}
