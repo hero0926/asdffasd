@@ -38,7 +38,7 @@ func main() {
 	router.HTMLRender = htmlRender.Create()
 
 	router.RedirectTrailingSlash = true
-	router.RedirectFixedPath = true
+	router.RedirectFixedPath = false
 
 	// Middlewares
 	router.Use(middlewares.Connect)
@@ -49,21 +49,30 @@ func main() {
 
 	// Routes
 
-	//router.GET("/", func(c *gin.Context) {
-	//	c.Redirect(http.StatusMovedPermanently, "/articles")
-	//})
+	router.GET("/", func(c *gin.Context) {
 
-	router.GET("/doctors", func(c *gin.Context) {
+		c.Redirect(http.StatusMovedPermanently, "/main")
+	})
+
+	router.GET("/doctors", func(c *gin.Context) { // 의사소개
 		c.HTML(http.StatusOK, "basic/doctors", gin.H{})
 	})
 
+	router.GET("/main", func(c *gin.Context) { //메인페이지
+		c.HTML(http.StatusOK, "basic/content", gin.H{})
+	})
+
+	router.GET("/contact", func(c *gin.Context) { //메인페이지
+		c.HTML(http.StatusOK, "basic/contact", gin.H{})
+	})
+
 	// Articles
-	router.GET("/new", articles.New)
-	router.GET("/articles/:_id", articles.Edit)
-	router.GET("/articles", articles.List)
-	router.POST("/articles", articles.Create)
-	router.POST("/articles/:_id", articles.Update)
-	router.POST("/delete/articles/:_id", articles.Delete)
+	router.GET("/new", articles.New)                     // 새로운 메일 보내기
+	router.GET("/consult/:_id", articles.Edit)           // 메일 읽기
+	router.GET("/consults", articles.List)               // 내가 쓴 상담 리스트
+	router.POST("/consult", articles.Create)             // 상담 쓰기
+	router.POST("/consult/:_id", articles.Update)        // 상담 업데이트
+	router.POST("/delete/consult/:_id", articles.Delete) // 상담 지우기
 
 	// Start listening
 	port := Port

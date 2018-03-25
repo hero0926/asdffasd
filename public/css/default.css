@@ -37,7 +37,7 @@ strong
 
 a
 {
-	color: #05598A;
+	color : #40A940;
 }
 
 a:hover
@@ -202,7 +202,7 @@ hr
 	{
 		
 		background: #FFFFFF url(images/bg01.png) repeat;
-		border-top: 4px solid #0A87CF;
+		border-top: 4px solid #698C10;
 		color: #333;
 	}
 
@@ -277,7 +277,7 @@ hr
 
 #header-wrapper2
 {
-	background: #05598A;
+	background: #698C10;
 	box-shadow: inset 0 -10px 10px -10px rgba(0,0,0,.05);
 }
 
@@ -420,8 +420,8 @@ hr
 		display: inline-block;
 		margin-top: 1.5em;
 		padding: 0.50em 3em 0.50em 2em;
-		background: #05598A;
-		border-left: 4px solid #0A87CF;
+		background: #698C10;
+		border-left: 4px solid #698C10;
 		letter-spacing: 0.20em;
 		text-decoration: none;
 		text-transform: uppercase;
