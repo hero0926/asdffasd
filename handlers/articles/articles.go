@@ -16,7 +16,7 @@ func New(c *gin.Context) {
 	article := models.Article{}
 
 	c.HTML(http.StatusOK, "articles/form", gin.H{
-		"title":   "New article",
+		"title":   "Ask a Consult",
 		"article": article,
 	})
 }
