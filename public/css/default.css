@@ -18,7 +18,7 @@ body
 h1, h2, h3
 {
 	margin: 0;
-	padding: 0;
+	padding: 0 0 0 20px;
 }
 
 p, ol, ul
@@ -99,7 +99,7 @@ hr
 
 .container
 {
-	width: 1200px;
+	width: 1000px;
 	margin: 0px auto;
 }
 
@@ -233,7 +233,7 @@ hr
 	#content
 	{
 		float: right;
-		width: 790px;
+		width: 1000px;
 	}
 
 /*********************************************************************************/
